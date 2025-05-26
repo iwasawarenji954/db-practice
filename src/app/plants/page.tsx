@@ -1,6 +1,6 @@
+import InventoryTable from '@/components/InventoryTable';
 import { stackServerApp } from '@/stack';
 import { SignUp } from '@stackframe/stack';
-import { Dice1 } from 'lucide-react';
 import React from 'react';
 
 async function page() {
@@ -10,7 +10,11 @@ async function page() {
   return (
     <>
     {user ? (
-      <h1>Inventory Table</h1>
+      <div className='mt-7 max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-10 gap-6'>
+        <div className='lg:col-span-full'>
+          <InventoryTable />
+        </div>
+      </div>
     ) : (
       <div className="flex justify-center mt-20 items-center">
         <SignUp />
