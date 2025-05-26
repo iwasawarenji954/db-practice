@@ -9,7 +9,6 @@ import { UserButton } from "@stackframe/stack";
 async function Navbar() {
   const user = await stackServerApp.getUser();
   const app  = stackServerApp.urls;
-  const userProfile = await getUserDetails(user?.id);
 
   return (
     <nav className="sticky top-0 h-12 w-full border-b bg-background/95 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60 z-50">
